@@ -94,7 +94,7 @@ server <- function(input, output) {
   
   output$selected_year = renderText({paste("You have selected the", input$year, 'map')})
   output$electoral_count = renderText({paste('Republican Electoral Count:', sum(elections$win.R * elections$electoralvals),
-                                            "<br> Democrat Electoral Count:", sum(elections$win.R * elections$electoralvals) )})
+                                            "<br> Democrat Electoral Count:", sum(elections$win.D * elections$electoralvals) )})
 
 }
 shinyApp(ui = ui, server = server)
